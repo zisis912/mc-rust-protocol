@@ -1,0 +1,15 @@
+[package]
+name = "macros"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1.0.42"
+syn = "2.0.111"
+proc-macro2 = "1.0.103"
+serde_json = "1.0.145"
+heck = "0.5.0"
+

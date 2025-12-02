@@ -1,0 +1,16 @@
+[package]
+name = "mc-rust-protocol"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+macros = { path = "macros" }
+byteorder = "1.5.0"
+serde_json = "1.0.145"
+hex = "0.4.3"
+rsa = "0.9.9"
+aes = "0.8.4"
+cfb8 = "0.8.1"
+flate2 = "1.1.5"
+thiserror = "2.0.17"
+take_mut = "0.2.2"
