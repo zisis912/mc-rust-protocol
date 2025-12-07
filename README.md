@@ -57,12 +57,12 @@ encoder.set_encryption(key: &[u8; 16]);
 // prepare packet payload
 let mut buf = Vec::new();
 VarInt(Handshake::ID).write_to(&mut buf)?;
-Handshake {
+Packet::Handshake(Handshake {
     protocol_version: VarInt(773),
     server_adress: "localhost".to_owned(),
     server_port: 25565,
     intent: Intent::Login,
-}.write_to(&mut buf)?;
+}).write(&mut buf)?;
 
 // write the packet payload to writer
 encoder.write_packet(buf)?;
